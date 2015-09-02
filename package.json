@@ -22,6 +22,9 @@
     "disallowMultipleVarDecl": false,
     "requireTrailingComma": false
   },
+  "scripts": {
+    "test": "gulp build:tests && karma start --single-run"
+  },
   "devDependencies": {
     "babel-jscs": "^2.0.4",
     "gulp": "^3.9.0",
