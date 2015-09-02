@@ -16,11 +16,26 @@
     "url": "https://github.com/MikeMcElroy/petulant-tatertot/issues"
   },
   "homepage": "https://github.com/MikeMcElroy/petulant-tatertot",
+  "jscsConfig": {
+    "esnext": true,
+    "preset": "airbnb",
+    "disallowMultipleVarDecl": false,
+    "requireTrailingComma": false
+  },
   "devDependencies": {
+    "babel-jscs": "^2.0.4",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
-    "gulp-eslint": "^1.0.0",
-    "gulp-jscs": "^2.0.0",
-    "gulp-webpack": "^1.5.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-html-replace": "^1.5.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.0",
+    "gulp-webpack": "^1.5.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "merge-stream": "^1.0.0",
+    "rimraf": "^2.4.3"
   }
 }
