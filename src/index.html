@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="Memory">
+    <head>
+        <title>Memory</title>
+        <style>
+        .game {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .cell {
+            background-color: cornflowerblue;
+            margin: auto;
+            margin-bottom: 3px;
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+        }
+        .cell.selected {
+            background-color: yellow;
+        }
+        </style>
+    </head>
+    <body ng-cloak ng-controller="MemoryGame">
+        <div class="message" ng-style="{'visibility' : !!message ? 'visible': 'hidden' }">
+            <div>{{message}}</div>
+            <div>Play again? <button ng-click="playAgain()">Yeah!</button></div>
+        </div>
+        <memory rows="5" columns="5" selectable="5" win-Game="winGame()" lose-Game="loseGame()"></memory>
+        <!-- build:js -->
+        <script src="lib/browser-polyfill.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js" type="text/javascript"></script>
+        <script src="MemoryApp.js"></script>
+        <script src="components/MemoryDirective.js"></script>
+        <script src="controllers/MemoryController.js"></script>
+        <script src="factories/MemoryFactories.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>
